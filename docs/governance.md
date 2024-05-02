@@ -1,12 +1,12 @@
 # 1. Purpose
 
-The Beman Project is dedicated to providing the guidance and facilities to ensure the highest quality libraries in ISO standard C++. We help library authors with development best practices, peer review, and contributing to the C++ standard. We distribute the libraries that are proposed to for standardization to ensure feedback ahead of standardization.
+The Beman Project is dedicated to providing the guidance and facilities to ensure the highest quality libraries in ISO standard C++. We help library authors with development best practices, peer review, and contributing to the C++ standard. We distribute the libraries proposed for standardization to facilitate early usage and feedback.  The Beman project is named in memory of Beman Dawes - co-founder of [[www.boost.org][Boost]].
 
 # 2. Membership
 
 ## 2.1 Membership Criteria:
 
-Membership in the Beman Project is open to individuals who actively contribute to the development of libraries and proposal to the ISO Standard. Contributors must adhere to the organization's code of conduct.  Members are individuals who fill a role in the project structure.
+Membership in the Beman Project is open to individuals and organizations actively contributing to the development of libraries proposed to the ISO Standard. Contributors must adhere to the organization's code of conduct.  Members are individuals who fill a role in the project structure.
 
 ## 2.2 Membership Rights and Responsibilities:
 
@@ -18,7 +18,7 @@ Members are expected to contribute positively to the organization, uphold its va
 
 The Beman Project Leads are responsible for maintaining the Library Acceptance and Incubating process.  This includes strategic planning, setting goals, and ensuring the organization's objectives are met.  This team should broadly understand both the Standardization process, the needs of library developers, and the concerns from Committee Members.  The Beman Project Leads ultimately approve or change the process that we use for exposing Beman Libraries to the wider community.
 
-Beman Leads are currently:
+Beman Leads are currently: Jeff Garland, Inbal Levi, and David Sankel
 
 ### 3.1.2 Adding and removing Beman Leads
 
