@@ -10,3 +10,12 @@ This project is organized by our [Governance structure](docs/governance.md).
 
 Also, consult our [FAQ](docs/faq.md).
 
+## Getting Started
+
+```
+$ git clone https://github.com/beman-org/beman.git
+$ cd beman
+$ cmake -S . -B build
+$ cmake --build build
+$ ./build/test/beman_test
+```
