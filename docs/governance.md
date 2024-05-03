@@ -8,7 +8,7 @@ The Beman project is named in memory of Beman Dawes - co-founder of [Boost](http
 
 ## 2.1 Membership Criteria:
 
-Membership in the Beman Project is open to individuals and organizations actively contributing to the development of libraries proposed to the ISO Standard. Contributors must adhere to the organization's code of conduct.  Members are individuals who fill a role in the project structure.
+Membership in the Beman Project is open to individuals and organizations actively contributing to the development of libraries proposed to the WG21 C++ Standard. Contributors must adhere to the organization's code of conduct.  Members are individuals who fill a role in the project structure.
 
 ## 2.2 Membership Rights and Responsibilities:
 
@@ -55,6 +55,8 @@ Removal as a Beman Project Library Author may be done when the library no longer
 Beman Project strives to make decisions through consensus among the Project Contributors and the Project Leads.  Proposals on the best way to proceed should be discussed in good faith.  Beman Project Leads ultimately decide the direction of the Project.
 
 # 5. Code of Conduct
+
+Please refer to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 # 5.1 Respectful Behavior:
 
