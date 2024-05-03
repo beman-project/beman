@@ -1,4 +1,4 @@
-The Beman Project is dedicated to providing the guidance and facilities to ensure the highest quality libraries in ISO standard C++. We help library authors with development best practices, peer review, and contributing to the C++ standard. We distribute the libraries that are proposed to for standardization to ensure feedback ahead of standardization.
+The Beman project's mission is to **support the efficient design and adoption of the highest quality C++ standard libraries** through implementation experience, user feedback, and technical expertise.
 
 The Beman project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
 
