@@ -22,4 +22,4 @@ FetchContent_MakeAvailable(
   scn
 )
 
-add_subdirectory(test)
+add_subdirectory(example)
