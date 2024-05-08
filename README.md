@@ -13,6 +13,7 @@ This project is organized by our [Governance structure](docs/governance.md).
 ---
 
 [Discourse for new joiners](https://discourse.boost.org/t/welcome-to-the-beman-project-discourse-start-here/40): start here
+
 [Welcome to Beman Project Development Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3).
 
 ---
