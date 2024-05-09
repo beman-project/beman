@@ -18,3 +18,12 @@ Questions?  Maybe they have already been answered in our [FAQ](docs/faq.md).
 
 The Beman project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
 
+## Getting Started
+
+```
+$ git clone https://github.com/beman-org/beman.git
+$ cd beman
+$ cmake -S . -B build
+$ cmake --build build
+$ ./build/test/beman_test
+```
