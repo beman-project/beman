@@ -22,10 +22,6 @@ The Beman Project Leads are responsible for maintaining the Library Acceptance a
 
 Beman Leads are currently: Jeff Garland, Inbal Levi, and David Sankel
 
-Jeff Garland
-David Sankel
-Inbal Levi
-
 ### 3.1.2 Adding and removing Beman Leads
 
 Any member of Beman Project Leads may step down or be replaced when they are no longer able to contribute effectively. The Beman Project Leads can nominate and decide on adding, removing, or replacing members by a majority decision.

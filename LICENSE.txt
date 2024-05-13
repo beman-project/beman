@@ -1,5 +1,5 @@
 ==============================================================================
-The LLVM Project is under the Apache License v2.0 with LLVM Exceptions:
+The Beman Project is under the Apache License v2.0 with LLVM Exceptions:
 ==============================================================================
 
                                  Apache License
@@ -222,9 +222,9 @@ the License, but only in their entirety and only with respect to the Combined
 Software.
 
 ==============================================================================
-Software from third parties included in the LLVM Project:
+Software from third parties included in the Beman Project:
 ==============================================================================
-The LLVM Project contains third party software which is under different license
+The Beman Project contains third party software which is under different license
 terms. All such code will be identified clearly using at least one of two
 mechanisms:
 1) It will be in a separate directory tree with its own `LICENSE.txt` or
