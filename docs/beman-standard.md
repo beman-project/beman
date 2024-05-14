@@ -58,6 +58,7 @@ under an approved license. These are:
 
 1. [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)
 2. [Apache License v2.0 with LLVM Exceptions](https://llvm.org/LICENSE.txt)
+3. [The MIT License](https://opensource.org/license/mit)
 
 **[LICENSE.BOOST]** RECOMMENDATION: All Beman libraries should be licensed
 under the [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt).
