@@ -97,17 +97,17 @@ For example, a Beman.SmartPointer library's repository should be named
 ## Top-level
 
 The top-level of a Beman library repository must consist of `CMakeLists.txt`,
-`LICENSE.txt`, and `README.md** files.
+`LICENSE`, and `README.md` files.
 
 **[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` at the repository's root
 that builds and tests (via. CTest) the library.
 
-**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE.txt` at the
+**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` at the
 repository's root with the contents of an approved license that covers the
 contents of the repository.
 
 **[TOPLEVEL.README]** REQUIREMENT: There must be a markdown-formatted
-`LICENSE.md` at the repository's root that describes the library, explains how
+`README.md` at the repository's root that describes the library, explains how
 to build it, and links to further documentation.
 
 ## `README.md`
