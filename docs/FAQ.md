@@ -12,9 +12,9 @@ In fact, there are plenty of papers already written that need an implementation 
 
 Please reach out to the Beman Project Leads to help get your specific project started.
 
-## I have a crazy library that’s probably never going to be a standard library feature, but I use it and think it’s neat. Can I contribute it to the Beman Project?
+## I have a library that isn't appropriate for the C++ standard. Can I contribute it to the Beman Project?
 
-We’re glad you’ve developed a neat and useful library, but the Beman Project is dedicated to getting the highest quality libraries through the rigorous effort of standardization.
+The Beman Project is dedicated to getting the highest quality libraries through the rigorous effort of standardization. Libraries not falling in this category are out of scope.
 
 ## I have a personal/work project but I have no interest in it becoming a standard library. Does the Beman Project have anything for me?
 
