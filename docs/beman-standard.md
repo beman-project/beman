@@ -7,7 +7,7 @@ Copyright (c) 2024 David Sankel <dsankel@boost.org>
 -->
 
 This document specifies rules and recommendations for Beman project libraries.
-Its goal is to create consistency that facilitates the evaluation of, and
+Its goal is to create consistency facilitating the evaluation of, and
 contribution to Beman libraries.
 
 ## Introduction
@@ -16,23 +16,22 @@ contribution to Beman libraries.
 
 This standards is driven by four core principles:
 
-1. **[CORE.QUALITY] Highest quality**. Standards track libraries impact a
-  countless number of engineers and, consequently, should be of the highest
-  quality.
-2. **[CORE.PRODUCTION_READY] Production-ready**. To get production feedback on a
-  library, it needs to be ready for that kind of usage.
+1. **[CORE.QUALITY] Highest quality**. Standards track libraries impact
+   countless engineers and, consequently, should be of the highest quality.
+2. **[CORE.PRODUCTION_READY] Production-ready**. Production feedback
+   necessitates reliable, well-documented software.
 3. **[CORE.INDUSTRY_STANDARD] Industry standard technology**. Where there's
-  industry consensus on best practices, we should take advantage. Innovation in
-  tooling and style is not our purpose.
+   industry consensus on best practices, we should take advantage. Innovation in
+   tooling and style is not our purpose.
 4. **[CORE.INCLUSIVE] Welcoming and inclusive community**. Broad, useful
-  feedback necessitates an unobstructed path for using, reviewing, and
-  contributing to Beman libraries. This principle encompasses ergonomics,
-  cross-industry participation, and cultural accommodation.
+   feedback requires an unobstructed path for using, reviewing, and
+   contributing to Beman libraries. This principle encompasses ergonomics,
+   cross-industry participation, and cultural accommodation.
 
 ### Changing this document
 
 This is a living document that adapts to evolving best practices and community
-needs. The process for making changes is as follows:
+needs. To make changes:
 
 1. Create a [discourse topic](https://discourse.boost.org) detailing the change
    and how it aligns with the core principles.
@@ -40,12 +39,12 @@ needs. The process for making changes is as follows:
    [GitHub](https://github.com/beman-project/beman) with a *leads question*
    label. The PR should also link to the discourse topic.
 3. Continue discussions on the PR and discourse topic.
-4. The leads make a decision based on the community feedback.
+4. Await a leads a decision based on the community feedback.
 
 ### Conventions
 
-This standard consists of entries which include an all-caps, dot-separated
-identifier which is used for referencing.
+This standard consists of entries that include an all-caps, dot-separated
+identifier for referencing.
 
 With the exception of the core principles, these entries are either rules or
 recommendations.
@@ -62,12 +61,12 @@ recommendations.
 **[LICENSE.APPROVED]** REQUIREMENT: All Beman libraries must be licensed
 under an approved license. These are:
 
-1. [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)
-2. [Apache License v2.0 with LLVM Exceptions](https://llvm.org/LICENSE.txt)
+1. [Apache License v2.0 with LLVM Exceptions](https://llvm.org/LICENSE.txt)
+2. [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt)
 3. [The MIT License](https://opensource.org/license/mit)
 
-**[LICENSE.BOOST]** RECOMMENDATION: All Beman libraries should be licensed
-under the [Boost Software License 1.0](https://www.boost.org/LICENSE_1_0.txt).
+**[LICENSE.BOOST]** RECOMMENDATION: All Beman libraries should be licensed under
+the [Apache License v2.0 with LLVM Exceptions](https://llvm.org/LICENSE.txt).
 
 **[LICENSE.CRITERIA]** REQUIREMENT: All approved licenses must meet the
 following requirements:
