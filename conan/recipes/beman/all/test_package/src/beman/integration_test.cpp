@@ -1,5 +1,4 @@
-
-#include <example.hxx>
+#include <example.hpp>
 #include <scn/scan.h>
 
 #include <iostream>
