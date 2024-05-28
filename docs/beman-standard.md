@@ -175,5 +175,5 @@ SPDX-License-Identifier: <SPDX License Expression>
 copyright notice following the SPDX license identifier.
 
 ```C++
-// Copyright (c) 2024 Ron Howard <ron@boost.org>
+// Copyright (c) 2024 Your Name <your_email@somewhere.org>
 ```
