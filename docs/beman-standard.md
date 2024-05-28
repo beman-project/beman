@@ -124,6 +124,15 @@ For example:
 **[README.PURPOSE]** RECOMMENDATION: Following the title, the `README.md` should
 contain a one- or two-paragraph summary describing the library's purpose.
 
+**[README.IMPLEMENTS]** RECOMMENDATION: Following the purpose and a newline, the
+`README.md` should indicate which papers the repository implements. Follow the
+following example's style:
+
+```markdown
+**Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
+[Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
+```
+
 ## Directory Layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
