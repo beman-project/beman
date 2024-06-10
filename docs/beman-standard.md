@@ -14,7 +14,7 @@ contribution to Beman libraries.
 
 ### Core principles
 
-This standards is driven by four core principles:
+This standard is driven by four core principles:
 
 1. **[CORE.QUALITY] Highest quality**. Standards track libraries impact
    countless engineers and, consequently, should be of the highest quality.
