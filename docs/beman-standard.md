@@ -49,8 +49,8 @@ identifier for referencing.
 With the exception of the core principles, these entries are either rules or
 recommendations.
 
-* **Rules** must be followed in order to conform to this standard. These entries
-  are prefixed by "RULE:".
+* **Requirements** must be followed in order to conform to this standard. These entries
+  are prefixed by "REQUIREMENT:".
 * **Recommendations** should be followed in general, but specific circumstances
   may make this a less-than-ideal choice. Libraries not following a specific
   recommendation can still conform to this standard. These entries are prefixed
