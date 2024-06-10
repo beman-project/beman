@@ -136,8 +136,13 @@ following example's style:
 ## Directory Layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
-public interface must reside within the `include/Beman/\<ShortName\>/`
+public interface must reside within the `include/Beman/&lt;ShortName&gt;/`
 directory.
+
+**[DIRECTORY.IMPLEMENTATION_HEADERS]** REQUIREMENT: Header files residing within
+`include/Beman/&lt;ShortName&gt;/` that are not part of the public interface
+must either begin with `__` or reside within a subdirectory of
+`include/Beman/&lt;ShortName&gt;/` that begins with `__`.
 
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
 public interface should reside in `src/`.
