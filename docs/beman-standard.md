@@ -140,9 +140,9 @@ public interface must reside within the `include/Beman/&lt;ShortName&gt;/`
 directory.
 
 **[DIRECTORY.IMPLEMENTATION_HEADERS]** REQUIREMENT: Header files residing within
-`include/Beman/&lt;ShortName&gt;/` that are not part of the public interface
+`include/Beman/<ShortName>/` that are not part of the public interface
 must either begin with `detail_` or reside within a subdirectory of
-`include/Beman/&lt;ShortName&gt;/` called `detail` or begins with `detail_`.
+`include/Beman/<ShortName>/` called `detail` or begins with `detail_`.
 
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
 public interface should reside in `src/`.
