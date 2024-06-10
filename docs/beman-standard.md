@@ -82,7 +82,7 @@ following requirements:
 
 ## General
 
-**[LIBRARY_NAMES]** REQUIREMENT: Beman libraries names begin with `Beman.`
+**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `Beman.`
 followed by an UpperCamelCase short name.
 
 Examples are Beman.SmartPointer and Beman.SenderReceiver.
