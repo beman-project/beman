@@ -1,4 +1,4 @@
-#include "example.h"
+#include "example.hpp"
 
 int main() {
     example();

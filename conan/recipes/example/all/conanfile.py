@@ -8,11 +8,11 @@ class exampleRecipe(ConanFile):
     package_type = "library"
 
     # Optional metadata
-    license = "<Put the package license here>"
-    author = "<Put your name here> <And your email here>"
-    url = "<Package recipe repository url here, for issues about the package>"
-    description = "<Description of example package here>"
-    topics = ("<Put some tag here>", "<here>", "<and here>")
+    license = "LLVM-exception"
+    author = "Beman Project <noreply@bemanproject.org>"
+    url = "https://github.com/beman-project/beman"
+    description = "Example Beman Project library"
+    topics = ("education", "C++")
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"

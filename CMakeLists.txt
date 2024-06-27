@@ -82,4 +82,4 @@ endforeach ()
 
 FetchContent_MakeAvailable(${Beman_names})
 
-add_subdirectory(example)
+add_subdirectory(tests)
