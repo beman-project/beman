@@ -2,7 +2,7 @@
 
 ## What is the relationship between the Beman Project and the Boost Foundation?
 
-While both Beman Project and Boost strive to provide high-quality C++ libraries to the community, the Beman Project is specifically focused on fostering works that can be adopted by the standard library.
+While both Beman Project and Boost strive to provide high-quality C++ libraries to the community, the Beman Project is specifically focused on fostering works that can be adopted by the standard library. Note that we expect some Boost libraries will become part of Beman over time.
 
 ## Do I have to write a WG21 C++ Standards Committee Paper before I can contribute to the Beman Project?
 
@@ -22,3 +22,11 @@ Yes! In our effort to create the highest-quality C++ libraries, we've establishe
 
 * Our [Example Project](https://github.com/beman-project/example) demonstrates a useful structure for organizing libraries.
 * Our [CI Project](https://github.com/beman-project/ci) utilizes Github Workflows to automate building, testing, and releasing libraries.
+
+## Will libraries stay in Beman forever?
+
+No! The current concept is that libraries will be gradually deprecated as official standard library implementations roll out. We expect this to coorespond to two standards cycles. So a library accepted into C++26 would be removed by C++32. Users can, of course, still depend on the original repo for the implementation if they don't want to change to ~std::~ for seme reason.
+
+## Is there are review process like Boost?
+
+No. Inclusion in Beman doesn't depend on passing a formal review. That said, authors can ask the community for reviews at any time! Also, we expect libraries to evolve and using the code review facilities allows authors to get other eyes on updates as proposals evolve.
