@@ -19,6 +19,9 @@ class scnRecipe(ConanFile):
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
 
+    # Build configuration
+    generators = "CMakeDeps", "CMakeToolchain"
+
     def config_options(self):
         if self.settings.os == "Windows":
             self.options.rm_safe("fPIC")
@@ -38,12 +41,6 @@ class scnRecipe(ConanFile):
     def layout(self):
         cmake_layout(self, src_folder="src")
 
-    def generate(self):
-        deps = CMakeDeps(self)
-        deps.generate()
-        tc = CMakeToolchain(self)
-        tc.generate()
-
     def build(self):
         cmake = CMake(self)
         cmake.configure()
@@ -55,7 +52,10 @@ class scnRecipe(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["scn"]
+        # Disable Conan generation of CMake modules for this package.
+        # This package already provides one!
+        self.cpp_info.set_property("cmake_find_mode", "none")
+        # Tell conan to set up discovery of CMake modules for this package.
+        # The CMake modules for this project are installed under `lib`.
+        self.cpp_info.builddirs.append(".")
 
-    
-
-    
