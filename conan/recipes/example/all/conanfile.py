@@ -1,5 +1,5 @@
 from conan import ConanFile
-from conan.tools.cmake import CMakeToolchain, CMake, cmake_layout, CMakeDeps
+from conan.tools.cmake import CMake, cmake_layout
 from conan.tools.files import apply_conandata_patches, export_conandata_patches, get
 
 
@@ -18,6 +18,9 @@ class exampleRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
+
+    # Build configuration
+    generators = "CMakeDeps", "CMakeToolchain"
 
     def config_options(self):
         if self.settings.os == "Windows":
@@ -38,12 +41,6 @@ class exampleRecipe(ConanFile):
     def layout(self):
         cmake_layout(self, src_folder="src")
 
-    def generate(self):
-        deps = CMakeDeps(self)
-        deps.generate()
-        tc = CMakeToolchain(self)
-        tc.generate()
-
     def build(self):
         cmake = CMake(self)
         cmake.configure()
@@ -55,7 +52,10 @@ class exampleRecipe(ConanFile):
 
     def package_info(self):
         self.cpp_info.libs = ["example"]
-
-    
-
+        # Disable Conan generation of CMake modules for this package.
+        # This package already provides one!
+        self.cpp_info.set_property("cmake_find_mode", "none")
+        # Tell conan to set up discovery of CMake modules for this package.
+        # The CMake modules for this project are installed under `lib`.
+        self.cpp_info.builddirs.append(".")
     
