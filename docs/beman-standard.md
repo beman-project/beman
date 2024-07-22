@@ -134,6 +134,35 @@ following example's style:
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
+## `CMakeLists.txt`
+
+**[CMAKE.AVOID_PASSTHROUGHS]** RECOMMENDATION: Avoid `CMakeLists.txt` files
+consisting of a single `add_subdirectory` call.
+
+In other words prefer,
+
+```CMake
+# <repo>/CMakeLists.txt
+# ...
+add_subdirectory(src/Beman/Optional26)
+```
+
+to,
+
+```CMake
+# <repo>/CMakeLists.txt
+# ...
+add_subdirectory(src) # Don't do this
+
+# <repo>/src/CMakeLists.txt
+add_subdirectory(Beman) # Don't do this
+
+# <repo>/src/Beman/CMakeLists.txt
+add_subdirectory(Optional26) # Don't do this
+```
+
+.
+
 ## Directory Layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
