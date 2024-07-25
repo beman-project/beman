@@ -10,26 +10,6 @@ This document specifies rules and recommendations for Beman project libraries.
 Its goal is to create consistency facilitating the evaluation of, and
 contribution to Beman libraries.
 
-<!-- toc -->
-
-## Table of contents
-
-- [The Beman Standard](#the-beman-standard)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-    - [Core principles](#core-principles)
-    - [Changing this document](#changing-this-document)
-    - [Conventions](#conventions)
-  - [License](#license)
-  - [General](#general)
-  - [Top-level](#top-level)
-  - [`README.md`](#readmemd)
-  - [`CMakeLists.txt`](#cmakeliststxt)
-  - [Directory Layout](#directory-layout)
-  - [File contents](#file-contents)
-
-<!-- tocstop -->
-
 ## Introduction
 
 ### Core principles
@@ -160,6 +140,8 @@ contain a one- or two-paragraph summary describing the library's purpose.
 **[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `BUILD_TESTING` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html)). Use the following style:
 
 ```CMake
+# <repo>/CMakeLists.txt
+# ...
 if(BUILD_TESTING)
   FetchContent_Declare(
     googletest
@@ -169,8 +151,9 @@ if(BUILD_TESTING)
   FetchContent_MakeAvailable(googletest)
 endif()
 
+# ...
 if(BUILD_TESTING)
-  add_subdirectory(/path/to/tests)
+  add_subdirectory(/path/to/tests) # CMAKE.AVOID_PASSTHROUGHS already applied.
 endif()
 ```
 
