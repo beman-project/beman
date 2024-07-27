@@ -153,7 +153,7 @@ endif()
 
 # ...
 if(BUILD_TESTING)
-  add_subdirectory(/path/to/tests) # CMAKE.AVOID_PASSTHROUGHS already applied.
+  add_subdirectory(/path/to/tests)
 endif()
 ```
 
