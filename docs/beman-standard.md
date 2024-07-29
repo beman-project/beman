@@ -206,9 +206,5 @@ SPDX-License-Identifier: <SPDX License Expression>
 -->
 ```
 
-**[FILE.COPYRIGHT]** RECOMMENDATION: Source code files should include a
+**[FILE.COPYRIGHT]** RECOMMENDATION: Source code files should NOT include a
 copyright notice following the SPDX license identifier.
-
-```C++
-// Copyright (c) 2024 Your Name <your_email@somewhere.org>
-```
