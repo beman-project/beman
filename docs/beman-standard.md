@@ -49,9 +49,9 @@ identifier for referencing.
 With the exception of the core principles, these entries are either rules or
 recommendations.
 
-* **Requirements** must be followed in order to conform to this standard. These entries
+- **Requirements** must be followed in order to conform to this standard. These entries
   are prefixed by "REQUIREMENT:".
-* **Recommendations** should be followed in general, but specific circumstances
+- **Recommendations** should be followed in general, but specific circumstances
   may make this a less-than-ideal choice. Libraries not following a specific
   recommendation can still conform to this standard. These entries are prefixed
   by "RECOMMENDATION:".
@@ -126,8 +126,7 @@ For example:
 contain a one- or two-paragraph summary describing the library's purpose.
 
 **[README.IMPLEMENTS]** RECOMMENDATION: Following the purpose and a newline, the
-`README.md` should indicate which papers the repository implements. Follow the
-following example's style:
+`README.md` should indicate which papers the repository implements. Use the following style:
 
 ```markdown
 **Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
@@ -135,6 +134,28 @@ following example's style:
 ```
 
 ## `CMakeLists.txt`
+
+**[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
+
+**[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `BUILD_TESTING` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html)). Use the following style:
+
+```CMake
+# <repo>/CMakeLists.txt
+# ...
+if(BUILD_TESTING)
+  FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571 # release-1.14.0
+  )
+  FetchContent_MakeAvailable(googletest)
+endif()
+
+# ...
+if(BUILD_TESTING)
+  add_subdirectory(/path/to/tests)
+endif()
+```
 
 **[CMAKE.AVOID_PASSTHROUGHS]** RECOMMENDATION: Avoid `CMakeLists.txt` files
 consisting of a single `add_subdirectory` call.
@@ -160,8 +181,6 @@ add_subdirectory(Beman) # Don't do this
 # <repo>/src/Beman/CMakeLists.txt
 add_subdirectory(Optional26) # Don't do this
 ```
-
-.
 
 ## Directory Layout
 
@@ -190,7 +209,6 @@ C++ files shall use the following form:
 ```
 
 CMake files and scripts shall use the following form
-
 
 ```CMake
 # SPDX-License-Identifier: <SPDX License Expression>

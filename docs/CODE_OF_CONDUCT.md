@@ -4,22 +4,6 @@
 Part of the Beman Project.
 -->
 
-<!-- toc -->
-
-## Table of contents
-
--   [Guidelines](#guidelines)
--   [Conduct team](#conduct-team)
-    -   [Reporting conduct](#reporting-conduct)
-    -   [Filing a report](#filing-a-report)
-    -   [What happens after contacting the conduct team?](#what-happens-after-contacting-the-conduct-team)
-    -   [Appealing](#appealing)
-    -   [Special cases](#special-cases)
--   [Enforcement action guidelines](#enforcement-action-guidelines)
--   [Acknowledgements](#acknowledgements)
-
-<!-- tocstop -->
-
 ## Guidelines
 
 The Beman Project community works to be welcoming and kind among itself and to others,
