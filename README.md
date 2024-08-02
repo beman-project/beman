@@ -14,20 +14,26 @@ We have two principle audiences: Library Developers and the C++ community.  We w
 
 This project is organized by our [Governance structure](docs/governance.md).
 
+### Participating and contributing
+
+We welcome all to participate in the Beman project through 
+[Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3) discussions or GitHub contributions. Our discourse community is the best way to stay up to
+date with the most recent developments.
+
+If you are looking for ways to contribute code, see the open issues of [beman-project repositories](https://github.com/orgs/beman-project/repositories). The [beman repository's issue list](https://github.com/beman-project/beman/issues), in particular, has implementation requests for various papers. Issues marked with `good first issue` are perfect for new
+contributors and usually have an assigned mentor. Don't hesitate to post on discourse with any questions.
+
+Please refer to our [code of conduct](/docs/CODE_OF_CONDUCT.md) and the
+[Beman standard](/docs/beman-standard.md) for further information about the community and
+development guidelines.
+
 ### FAQ
 
-[Discourse for new joiners](https://discourse.boost.org/t/welcome-to-the-beman-project-discourse-start-here/40): start here
-
-[Welcome to Beman Project Development Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3).
-
----
-
-Questions?  Maybe they have already been answered in our [FAQ](docs/FAQ.md).
+Questions? Maybe they have already been answered in our [FAQ](docs/FAQ.md).
 
 ### About the Name
 
 The Beman project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
-
 
 ## Getting Started
 
