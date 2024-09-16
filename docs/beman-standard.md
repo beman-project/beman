@@ -83,16 +83,16 @@ following requirements:
 
 ## General
 
-**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `Beman.`
-followed by an UpperCamelCase short name.
+**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
+followed by an `snake_case` short name.
 
-Examples are Beman.SmartPointer and Beman.SenderReceiver.
+Examples are beman.smart_pointer and beman.sender_receiver.
 
 **[REPOSITORY_NAME]** RECOMMENDATION: The repository should be named after the
-library name excluding the `Beman.` prefix.
+library name excluding the `beman.` prefix.
 
-For example, a Beman.SmartPointer library's repository should be named
-`SmartPointer`.
+For example, a beman.smart_pointer library's repository should be named
+`smart_pointer`.
 
 ## Top-level
 
@@ -119,7 +119,7 @@ description.
 For example:
 
 ```markdown
-# Beman.SenderReceiver: Scalable Asychronous Program Building Blocks
+# beman.sender_receiver: Scalable Asychronous Program Building Blocks
 ```
 
 **[README.PURPOSE]** RECOMMENDATION: Following the title, the `README.md` should
@@ -133,9 +133,47 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-## `CMakeLists.txt`
+## CMake
 
 **[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
+
+**[CMAKE.PROJECT_NAME]** RECOMMENDATION: The CMake project name should be
+identical to the beman library name.
+
+**[CMAKE.LIBRARY_NAME]** RECOMMENDATION: The CMake library target's name should
+be identical to the library name.
+
+Example:
+
+```CMake
+add_library(beman.smart_pointer STATIC)
+#...
+```
+
+**[CMAKE.LIBRARY_ALIAS]** REQUIREMENT: The CMake code must create an alias of
+the library target named `beman::<short_name>`. This target is intended for
+external use.
+
+Example:
+
+```CMake
+add_library(beman::smart_pointer ALIAS beman.smart_pointer)
+#...
+```
+
+**[CMAKE.TARGET_NAMES]** RECOMMENDATION: All targets, aside from the library
+target, should begin with a `<library_name>.` prefix
+
+```CMake
+add_executable(beman.smart_pointer.examples.basic)
+#...
+add_executable(beman.smart_pointer.tests.roundtrip)
+#...
+```
+
+**[CMAKE.CONFIG]** REQUIREMENT: At `install` time, a
+`<library_name>Config.cmake` must be created which exports a
+`beman::<short_name>` target.
 
 **[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `BUILD_TESTING` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html)). Use the following style:
 
@@ -165,7 +203,7 @@ In other words prefer,
 ```CMake
 # <repo>/CMakeLists.txt
 # ...
-add_subdirectory(src/Beman/Optional26)
+add_subdirectory(src/beman/optional26)
 ```
 
 to,
@@ -176,25 +214,30 @@ to,
 add_subdirectory(src) # Don't do this
 
 # <repo>/src/CMakeLists.txt
-add_subdirectory(Beman) # Don't do this
+add_subdirectory(beman) # Don't do this
 
-# <repo>/src/Beman/CMakeLists.txt
-add_subdirectory(Optional26) # Don't do this
+# <repo>/src/beman/CMakeLists.txt
+add_subdirectory(optional26) # Don't do this
 ```
 
 ## Directory Layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
-public interface must reside within the `include/Beman/<ShortName>/`
+public interface must reside within the `include/beman/<short_name>/`
 directory.
 
 **[DIRECTORY.IMPLEMENTATION_HEADERS]** REQUIREMENT: Header files residing within
-`include/Beman/<ShortName>/` that are not part of the public interface
+`include/beman/<short_name>/` that are not part of the public interface
 must either begin with `detail_` or reside within a subdirectory of
-`include/Beman/<ShortName>/` called `detail` or begins with `detail_`.
+`include/beman/<short_name>/` called `detail` or begins with `detail_`.
 
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
 public interface should reside in `src/`.
+
+## C++
+
+**[CPP.NAMESPACE]**: Headers in `include/beman/<short_name>/` should export
+entities in the `beman::<short_name>` namespace.
 
 ## File contents
 
