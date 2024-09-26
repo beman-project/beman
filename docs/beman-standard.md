@@ -252,7 +252,7 @@ Examples:
 // SPDX-License-Identifier: <SPDX License Expression>
 ```
 
-* CMake files and scripts shall use the following form
+* CMake files and scripts shall use the following form:
 
 ```CMake
 # SPDX-License-Identifier: <SPDX License Expression>
