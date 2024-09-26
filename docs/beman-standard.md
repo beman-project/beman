@@ -243,21 +243,23 @@ entities in the `beman::<short_name>` namespace.
 
 **[FILE.LICENSE_ID]** REQUIREMENT: The [SPDX license
 identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
-first possible line in files which can contain a comment.
+first possible line in all files which can contain a comment 
+(e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc). 
 
-C++ files shall use the following form:
+Examples:
+* C++ files shall use the following form:
 
 ```C++
 // SPDX-License-Identifier: <SPDX License Expression>
 ```
 
-CMake files and scripts shall use the following form
+* CMake files and scripts shall use the following form:
 
 ```CMake
 # SPDX-License-Identifier: <SPDX License Expression>
 ```
 
-Markdown files will use a comment following the title:
+* Markdown files will use a comment following the title:
 
 ```markdown
 # Title
