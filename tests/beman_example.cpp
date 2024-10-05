@@ -1,8 +1,8 @@
-
-#include <example.hxx>
+#include <example.hpp>
 #include <scn/scan.h>
 
 #include <iostream>
+#include <vector>
 
 int main()
 {
@@ -20,4 +20,5 @@ int main()
     for (auto i : integers) {
       std::cout << i << "\n";
     }
+    return 0;
 }

@@ -2,14 +2,14 @@
   "libraries": [
     {
       "name": "example",
-      "git_repository": "https://github.com/beman-project/example.git",
-      "git_tag": "375f3e7",
+      "git_repository": "https://github.com/bretbrownjr/example.git",
+      "git_tag": "0.0.2",
       "default_branch": "main"
     },
     {
       "name": "scn",
       "git_repository": "https://github.com/eliaskosunen/scnlib.git",
-      "git_tag": "v2.0.2",
+      "git_tag": "v3.0.1",
       "default_branch": "master"
     }
   ]

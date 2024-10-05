@@ -1,0 +1,11 @@
+sources:
+  "0.0.2":
+    url:
+      - "https://github.com/bretbrownjr/example/archive/refs/tags/0.0.2.tar.gz"
+
+    sha256: "6e372d8473dfdac416a23e5e72a2fa9bfce80c5ebdc4d1b0c3f236f8e927258d"
+  "0.0.1":
+    url:
+      - "https://github.com/bretbrownjr/example/archive/refs/tags/0.0.1.tar.gz"
+
+    sha256: "73caec479f48cf5a07d650d004c5a36ab95dfa6c9167fc232324dbb24bd8e764"
