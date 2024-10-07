@@ -83,31 +83,34 @@ following requirements:
 
 ## General
 
-**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
+**[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
 followed by an `snake_case` short name.
 
 Examples are beman.smart_pointer and beman.sender_receiver.
 
-**[REPOSITORY_NAME]** RECOMMENDATION: The repository should be named after the
+**[REPOSITORY.NAME]** RECOMMENDATION: The repository should be named after the
 library name excluding the `beman.` prefix.
 
 For example, a beman.smart_pointer library's repository should be named
 `smart_pointer`.
+
+**[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
+with a relevant set of codeowners.
 
 ## Top-level
 
 The top-level of a Beman library repository must consist of `CMakeLists.txt`,
 `LICENSE`, and `README.md` files.
 
-**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` at the repository's root
+**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
 that builds and tests (via. CTest) the library.
 
-**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` at the
+**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` file at the
 repository's root with the contents of an approved license that covers the
 contents of the repository.
 
 **[TOPLEVEL.README]** REQUIREMENT: There must be a markdown-formatted
-`README.md` at the repository's root that describes the library, explains how
+`README.md` file at the repository's root that describes the library, explains how
 to build it, and links to further documentation.
 
 ## `README.md`
@@ -243,8 +246,8 @@ entities in the `beman::<short_name>` namespace.
 
 **[FILE.LICENSE_ID]** REQUIREMENT: The [SPDX license
 identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
-first possible line in all files which can contain a comment 
-(e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc). 
+first possible line in all files which can contain a comment
+(e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc).
 
 Examples:
 * C++ files shall use the following form:
