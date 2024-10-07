@@ -83,31 +83,34 @@ following requirements:
 
 ## General
 
-**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
+**[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
 followed by an `snake_case` short name.
 
 Examples are beman.smart_pointer and beman.sender_receiver.
 
-**[REPOSITORY_NAME]** RECOMMENDATION: The repository should be named after the
+**[REPOSITORY.NAME]** RECOMMENDATION: The repository should be named after the
 library name excluding the `beman.` prefix.
 
 For example, a beman.smart_pointer library's repository should be named
 `smart_pointer`.
 
+**[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` at the
+repository's root with relevant set of codeowners.
+
 ## Top-level
 
-The top-level of a Beman library repository must consist of `CMakeLists.txt`,
-`LICENSE`, and `README.md` files.
+The top-level of a Beman library repository must consist of few required files, 
+which are listed below.
 
-**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` at the repository's root
+**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
 that builds and tests (via. CTest) the library.
 
-**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` at the
+**[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` file at the
 repository's root with the contents of an approved license that covers the
 contents of the repository.
 
 **[TOPLEVEL.README]** REQUIREMENT: There must be a markdown-formatted
-`README.md` at the repository's root that describes the library, explains how
+`README.md` file at the repository's root that describes the library, explains how
 to build it, and links to further documentation.
 
 ## `README.md`
