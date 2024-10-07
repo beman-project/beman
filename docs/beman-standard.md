@@ -83,12 +83,12 @@ following requirements:
 
 ## General
 
-**[LIBRARY_NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
+**[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
 followed by an `snake_case` short name.
 
 Examples are beman.smart_pointer and beman.sender_receiver.
 
-**[REPOSITORY_NAME]** RECOMMENDATION: The repository should be named after the
+**[REPOSITORY.NAME]** RECOMMENDATION: The repository should be named after the
 library name excluding the `beman.` prefix.
 
 For example, a beman.smart_pointer library's repository should be named
