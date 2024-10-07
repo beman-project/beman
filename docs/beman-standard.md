@@ -94,7 +94,7 @@ library name excluding the `beman.` prefix.
 For example, a beman.smart_pointer library's repository should be named
 `smart_pointer`.
 
-**[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` at the
+**[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file at the
 repository's root with relevant set of codeowners.
 
 ## Top-level
