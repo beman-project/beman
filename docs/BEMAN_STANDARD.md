@@ -239,6 +239,9 @@ the same structure from `include/` - e.g., `src/beman/<short_name>/`. Check `CMA
 **[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the top-level `tests/`
 directory. If multiple test types are present, subdirectories can be made (e.g., unit tests, performance etc).
 
+**[DIRECTORY.EXAMPLES]** REQUIREMENT: All example files must reside within the top-level `examples/`
+directory. Each project must have at least one relevant example.
+
 ## File layout
 
 **[FILE.NAMES]** RECOMMENDATION: Source code and header should use the `snake_case` naming convention (similar to `LIBRARY.NAMES`).
