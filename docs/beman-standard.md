@@ -1,10 +1,8 @@
-# The Beman Standard
-
 <!--
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
-
-Copyright (c) 2024 David Sankel <dsankel@boost.org>
 -->
+
+# The Beman Standard
 
 This document specifies rules and recommendations for Beman project libraries.
 Its goal is to create consistency facilitating the evaluation of, and

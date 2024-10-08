@@ -1,3 +1,7 @@
+<!--
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+-->
+
 # Frequently Asked Questions
 
 ## What is the relationship between the Beman Project and the Boost Foundation?

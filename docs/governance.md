@@ -1,3 +1,7 @@
+<!--
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+-->
+
 # 1. Purpose
 
 The Beman Project is dedicated to providing the guidance and facilities to ensure the highest quality libraries in ISO standard C++. We help library authors with development best practices, peer review, and contributing to the C++ standard. We distribute the libraries proposed for standardization to facilitate early usage and feedback.
