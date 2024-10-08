@@ -239,10 +239,12 @@ the same structure from `include/` - e.g., `src/beman/<short_name>/`. Check `CMA
 **[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the top-level `tests/`
 directory. If multiple test types are present, subdirectories can be made (e.g., unit tests, performance etc).
 
-**[DIRECTORY.EXAMPLES]** REQUIREMENT: All example files must reside within the top-level `examples/`
+**[DIRECTORY.EXAMPLES]** REQUIREMENT: If present, all example files must reside within the top-level `examples/`
 directory. Each project must have at least one relevant example.
 
-**[DIRECTORY.DOCS]** REQUIREMENT: All documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+**[DIRECTORY.DOCS]** REQUIREMENT: If present, all documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+
+**[DIRECTORY.PAPERS]** REQUIREMENT: If present, all paper related files (e.g., WIP LaTeX/Markdown projects for ISO Standardization), must reside within the top-level `papers/` directory.
 
 ## File layout
 
