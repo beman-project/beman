@@ -1,8 +1,8 @@
-# Code of conduct
-
 <!--
-Part of the Beman Project.
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
+
+# Code of conduct
 
 ## Guidelines
 

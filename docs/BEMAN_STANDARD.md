@@ -1,10 +1,8 @@
-# The Beman Standard
-
 <!--
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
-
-Copyright (c) 2024 David Sankel <dsankel@boost.org>
 -->
+
+# The Beman Standard
 
 This document specifies rules and recommendations for Beman project libraries.
 Its goal is to create consistency facilitating the evaluation of, and
@@ -86,13 +84,12 @@ following requirements:
 **[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
 followed by an `snake_case` short name.
 
-Examples are beman.smart_pointer and beman.sender_receiver.
+Examples: `beman.smart_pointer` and `beman.sender_receiver`.
 
 **[REPOSITORY.NAME]** RECOMMENDATION: The repository should be named after the
 library name excluding the `beman.` prefix.
 
-For example, a beman.smart_pointer library's repository should be named
-`smart_pointer`.
+Examples: A `beman.smart_pointer` library's repository should be named `smart_pointer`.
 
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
@@ -119,7 +116,7 @@ to build it, and links to further documentation.
 header with the name of the library optionally followed with a ":" and short
 description.
 
-For example:
+Examples:
 
 ```markdown
 # beman.sender_receiver: Scalable Asychronous Program Building Blocks
@@ -146,7 +143,7 @@ identical to the beman library name.
 **[CMAKE.LIBRARY_NAME]** RECOMMENDATION: The CMake library target's name should
 be identical to the library name.
 
-Example:
+Examples:
 
 ```CMake
 add_library(beman.smart_pointer STATIC)
@@ -157,7 +154,7 @@ add_library(beman.smart_pointer STATIC)
 the library target named `beman::<short_name>`. This target is intended for
 external use.
 
-Example:
+Examples:
 
 ```CMake
 add_library(beman::smart_pointer ALIAS beman.smart_pointer)
@@ -223,26 +220,140 @@ add_subdirectory(beman) # Don't do this
 add_subdirectory(optional26) # Don't do this
 ```
 
-## Directory Layout
+## Directory layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
-public interface must reside within the `include/beman/<short_name>/`
-directory.
+public interface must reside within the `include/beman/<short_name>/` directory.
+
+Examples:
+
+```shell
+include
+└── beman
+    └── exemplar
+        └── identity.hpp
+        └── ...
+        └── ...
+```
 
 **[DIRECTORY.IMPLEMENTATION_HEADERS]** REQUIREMENT: Header files residing within
 `include/beman/<short_name>/` that are not part of the public interface
 must either begin with `detail_` or reside within a subdirectory of
 `include/beman/<short_name>/` called `detail` or begins with `detail_`.
 
+Examples:
+
+```shell
+include
+└── beman
+    └── optional26
+        ├── detail                           # Private implementation subdirectory.
+        │   ├── iterator.hpp
+        │   └── stl_interfaces
+        │       ├── config.hpp
+        │       ├── fwd.hpp
+        │       └── iterator_interface.hpp
+        └── optional.hpp                     # Public interface.
+```
+
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
-public interface should reside in `src/`.
+public interface should reside in the top-level `src/` directory, and should use
+the same structure from `include/` - e.g., `src/beman/<short_name>/`. Check `CMAKE.AVOID_PASSTHROUGHS`.
 
-## C++
+Examples:
 
-**[CPP.NAMESPACE]**: Headers in `include/beman/<short_name>/` should export
-entities in the `beman::<short_name>` namespace.
+```shell
+src
+└── beman
+    └── exemplar
+        ├── CMakeLists.txt
+        └── identity.cpp
 
-## File contents
+src
+└── beman
+    └── optional26
+        ├── CMakeLists.txt
+        ├── detail
+        │   └── iterator.cpp
+        └── optional.cpp
+```
+
+**[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the top-level `tests/`
+directory, and should use the same structure from `include/`. If multiple test types are present,
+subdirectories can be made (e.g., unit tests, performance etc).
+
+Examples:
+
+```shell
+tests
+└── beman
+    └── exemplar
+        └── identity.test.cpp
+
+tests
+└── beman
+    └── optional26
+        ├── CMakeLists.txt
+        ├── detail
+        │   └── iterator.test.cpp
+        ├── optional.test.cpp
+        ├── optional_constexpr.test.cpp
+        ├── optional_monadic.test.cpp
+        ├── optional_range_support.test.cpp
+        ├── test_types.cpp
+        ├── test_types.hpp
+        ├── test_utilities.cpp
+        └── test_utilities.hpp
+```
+
+**[DIRECTORY.EXAMPLES]** REQUIREMENT: If present, all example files must reside within the top-level `examples/`
+directory. Each project must have at least one relevant example.
+
+Examples:
+
+```shell
+examples
+├── CMakeLists.txt
+├── identity_as_default_projection.cpp
+└── identity_direct_usage.cpp
+```
+
+**[DIRECTORY.DOCS]** REQUIREMENT: If present, all documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+
+Examples:
+
+```shell
+docs
+├── debug
+│   └── ci.md
+├── dev
+│   └── lint.md
+├── local.md
+└── optional26.md
+```
+
+**[DIRECTORY.PAPERS]** REQUIREMENT: If present, all paper related files (e.g., WIP LaTeX/Markdown projects for ISO Standardization), must reside within the top-level `papers/` directory.
+
+Examples:
+
+```shell
+papers
+└── P2988
+    ├── Makefile
+    ├── README.md
+    ├── abstract.bst
+    ...
+```
+
+## File layout
+
+**[FILE.NAMES]** RECOMMENDATION: Source code and header should use the `snake_case` naming convention (similar to `LIBRARY.NAMES`).
+
+Examples: `identity.hpp`, `identity.cpp`, `iterator_interface.hpp` or `optional_range_support.test.cpp`.
+
+**[FILE.TEST_NAMES]** REQUIREMENT: Test source code files must use the `*.test.cpp` naming convention.
+
+Examples: `identity.test.cpp`, `optional_ref.test.cpp` or `optional_range_support.test.cpp`.
 
 **[FILE.LICENSE_ID]** REQUIREMENT: The [SPDX license
 identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
@@ -250,6 +361,7 @@ first possible line in all files which can contain a comment
 (e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc).
 
 Examples:
+
 * C++ files shall use the following form:
 
 ```C++
@@ -274,3 +386,8 @@ SPDX-License-Identifier: <SPDX License Expression>
 
 **[FILE.COPYRIGHT]** RECOMMENDATION: Source code files should NOT include a
 copyright notice following the SPDX license identifier.
+
+## C++
+
+**[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/` should export
+entities in the `beman::<short_name>` namespace.

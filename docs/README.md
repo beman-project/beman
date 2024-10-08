@@ -1,8 +1,8 @@
-# Docs
-
 <!--
-Part of the Beman Project.
+SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
+
+# Docs
 
 This directory contains information about how the project works, goals, and community information.
 
