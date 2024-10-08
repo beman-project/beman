@@ -242,6 +242,8 @@ directory. If multiple test types are present, subdirectories can be made (e.g.,
 **[DIRECTORY.EXAMPLES]** REQUIREMENT: All example files must reside within the top-level `examples/`
 directory. Each project must have at least one relevant example.
 
+**[DIRECTORY.DOCS]** REQUIREMENT: All documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+
 ## File layout
 
 **[FILE.NAMES]** RECOMMENDATION: Source code and header should use the `snake_case` naming convention (similar to `LIBRARY.NAMES`).
