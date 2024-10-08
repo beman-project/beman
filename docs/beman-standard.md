@@ -223,7 +223,7 @@ add_subdirectory(beman) # Don't do this
 add_subdirectory(optional26) # Don't do this
 ```
 
-## Directory Layout
+## Directory layout
 
 **[DIRECTORY.INTERFACE_HEADERS]** REQUIREMENT: Header files that are part of the
 public interface must reside within the `include/beman/<short_name>/`
@@ -235,14 +235,17 @@ must either begin with `detail_` or reside within a subdirectory of
 `include/beman/<short_name>/` called `detail` or begins with `detail_`.
 
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
-public interface should reside in `src/`.
+public interface should reside in the top-level `src/` directory, and should use
+the same structure from `include/` - e.g., `src/beman/<short_name>/`. Check `CMAKE.AVOID_PASSTHROUGHS`.
 
-## C++
+**[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the top-level `tests/`
+directory. If multiple test types are present, subdirectories can be made (e.g., unit tests, performance etc).
 
-**[CPP.NAMESPACE]**: Headers in `include/beman/<short_name>/` should export
-entities in the `beman::<short_name>` namespace.
+## File layout
 
-## File contents
+**[FILE.NAMES]** RECOMMENDATION: Source code and header should use the `snake_case` naming convention (similar to `LIBRARY.NAMES`).
+
+**[FILE.TEST_NAMES]** REQUIREMENT: Test source code files must use the `*.test.cpp` naming convention.
 
 **[FILE.LICENSE_ID]** REQUIREMENT: The [SPDX license
 identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
@@ -274,3 +277,8 @@ SPDX-License-Identifier: <SPDX License Expression>
 
 **[FILE.COPYRIGHT]** RECOMMENDATION: Source code files should NOT include a
 copyright notice following the SPDX license identifier.
+
+## C++
+
+**[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/` should export
+entities in the `beman::<short_name>` namespace.
