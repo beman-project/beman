@@ -175,22 +175,31 @@ add_executable(beman.smart_pointer.tests.roundtrip)
 `<library_name>Config.cmake` must be created which exports a
 `beman::<short_name>` target.
 
-**[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `BUILD_TESTING` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html)). Use the following style:
+**[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `<short_name>_BUILD_TESTING` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html)). The option is prefixed with the project so that projects can compose. Turning on testing for the top level project should not turn on testing for dependencies. Since testing is part of the normal development workflow it is appropriate to set the option on by default for the top level project
+
+Use the following style:
 
 ```CMake
 # <repo>/CMakeLists.txt
 # ...
-if(BUILD_TESTING)
+option(
+    <short_name>_ENABLE_TESTING
+    "Enable building tests and test infrastructure"
+    ${PROJECT_IS_TOP_LEVEL}
+)
+
+if(<short_name>_ENABLE_TESTING)
   FetchContent_Declare(
     googletest
+    EXCLUDE_FROM_ALL
     GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571 # release-1.14.0
+    GIT_TAG e39786088138f2749d64e9e90e0f9902daa77c40 # release-1.15.0
   )
   FetchContent_MakeAvailable(googletest)
 endif()
 
 # ...
-if(BUILD_TESTING)
+if(<short_name>_BUILD_TESTING)
   add_subdirectory(/path/to/tests)
 endif()
 ```
