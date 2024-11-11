@@ -200,7 +200,7 @@ endif()
 
 # ...
 if(<short_name>_BUILD_TESTING)
-  add_subdirectory(/path/to/tests)
+  add_subdirectory(tests)
 endif()
 ```
 
