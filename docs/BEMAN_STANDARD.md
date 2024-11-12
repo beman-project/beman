@@ -204,6 +204,17 @@ if(BEMAN_<short_name>_BUILD_TESTING)
 endif()
 ```
 
+**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when [PROJECT_IS_TOP_LEVEL](https://cmake.org/cmake/help/latest/variable/PROJECT_IS_TOP_LEVEL.html) is not set. Examples should not be installed when current library is used as an dependency.
+
+Use the following style:
+
+```CMake
+# <repo>/CMakeLists.txt
+# ...
+if(PROJECT_IS_TOP_LEVEL)
+    add_subdirectory(examples)
+endif()
+```
 **[CMAKE.AVOID_PASSTHROUGHS]** RECOMMENDATION: Avoid `CMakeLists.txt` files
 consisting of a single `add_subdirectory` call.
 
@@ -321,6 +332,7 @@ directory. Each project must have at least one relevant example.
 Examples:
 
 ```shell
+
 examples
 ├── CMakeLists.txt
 ├── identity_as_default_projection.cpp
