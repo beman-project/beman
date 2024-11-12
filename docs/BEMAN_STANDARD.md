@@ -204,7 +204,7 @@ if(BEMAN_<short_name>_BUILD_TESTING)
 endif()
 ```
 
-**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLEs` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies. 
+**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies. 
 
 Use the following style:
 
