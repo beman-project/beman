@@ -343,7 +343,6 @@ directory. Each project must have at least one relevant example.
 Examples:
 
 ```shell
-
 examples
 ├── CMakeLists.txt
 ├── identity_as_default_projection.cpp
