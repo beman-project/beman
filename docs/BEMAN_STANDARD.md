@@ -222,7 +222,7 @@ option(
 
 # ...
 if(BEMAN_<short_name>_BUILD_EXAMPLES)
-  add_subdirectory(tests)
+  add_subdirectory(examples)
 endif()
 ```
 
