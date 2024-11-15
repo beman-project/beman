@@ -121,7 +121,7 @@ issue could impact the community's safety, well-being, and inclusivity. It is
 our priority to remain a welcoming community to victims as well as groups
 subjected to systemic marginalization or underrepresentation.
 
-If you have questions, please feel free to ask on our communication channels, 
+If you have questions, please feel free to ask on our communication channels,
 or contact
 any member of the conduct team directly.
 

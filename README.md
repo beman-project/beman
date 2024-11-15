@@ -20,7 +20,7 @@ This project is organized by our [Governance structure](docs/governance.md).
 
 ### Participating and contributing
 
-We welcome all to participate in the Beman project through 
+We welcome all to participate in the Beman project through
 [Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3) discussions or GitHub contributions. Our discourse community is the best way to stay up to
 date with the most recent developments.
 

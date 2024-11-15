@@ -69,5 +69,3 @@ Discrimination, harassment, or any form of disrespectful behavior will not be to
 Conflicts should be addressed privately and respectfully between parties involved.
 
 If resolution cannot be achieved, mediation by the Beman Leads may be requested.
-
-
