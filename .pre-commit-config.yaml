@@ -9,15 +9,6 @@ repos:
     -   id: check-yaml
     -   id: check-added-large-files
 
-    # Clang-format for C++
-    # This brings in a portable version of clang-format.
-    # See also: https://github.com/ssciwr/clang-format-wheel
-  - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v18.1.8
-    hooks:
-    - id: clang-format
-      types_or: [c++, c]
-
     # CMake linting and formatting
   - repo: https://github.com/BlankSpruce/gersemi
     rev: 0.15.1
@@ -31,3 +22,10 @@ repos:
     rev: v0.42.0
     hooks:
     - id: markdownlint
+
+    # Code spelling check, note auto-correction is not enabled
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.4
+    hooks:
+    - id: codespell
+      exclude: ^build|presentations
