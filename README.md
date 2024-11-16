@@ -8,7 +8,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 ### Mission
 
-The Beman Project’s [mission](docs/missionstatement.md) is to **support the efficient design and adoption of the highest quality C++ standard libraries** through implementation experience, user feedback, and technical expertise.
+The Beman Project’s [mission](docs/MISSION_STATEMENT.md) is to **support the efficient design and adoption of the highest quality C++ standard libraries** through implementation experience, user feedback, and technical expertise.
 
 ### Community
 
@@ -16,7 +16,7 @@ We have two principle audiences: Library Developers and the C++ community.  We w
 
 ### Governance
 
-This project is organized by our [Governance structure](docs/governance.md).
+This project is organized by our [Governance structure](docs/GOVERNANCE.md).
 
 ### Participating and contributing
 
@@ -28,7 +28,7 @@ If you are looking for ways to contribute code, see the open issues of [beman-pr
 contributors and usually have an assigned mentor. Don't hesitate to post on discourse with any questions.
 
 Please refer to our [code of conduct](/docs/CODE_OF_CONDUCT.md) and the
-[Beman standard](/docs/beman-standard.md) for further information about the community and
+[Beman standard](/docs/BEMAN_STANDARD.md) for further information about the community and
 development guidelines.
 
 ### FAQ
