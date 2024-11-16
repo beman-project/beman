@@ -127,7 +127,7 @@ any member of the conduct team directly.
 
 ## Conduct team
 
-The conduct team will be the Beman Project Leads as outlined in our [Governance Documents](governance.md).
+The conduct team will be the Beman Project Leads as outlined in our [Governance Documents](GOVERNANCE.md).
 
 ### Reporting conduct
 
@@ -215,7 +215,7 @@ confidential unless instructed otherwise by those individuals.
 
 Only permanent resolutions, such as bans, or requests for public actions may be
 appealed. To appeal a decision of the conduct team, contact the
-[Beman leads](governanace.md) with your appeal and
+[Beman leads](GOVERNANACE.md) with your appeal and
 they will review the case.
 
 In general, it is **not** appropriate to appeal a particular decision in public
