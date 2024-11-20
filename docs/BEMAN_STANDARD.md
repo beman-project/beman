@@ -427,7 +427,7 @@ entities in the `beman::<short_name>` namespace.
 
 **[CI.PLATFORM]** REQUIREMENT: All CI should be implemented using GitHub Actions or an CI platform that appripriatly interacts with the code control system.
 
-**[CI.TEST]** REQUIREMENT: CI must execute appripriate testing of reasonable scope tagged with each commit, and must fail with test cases.
+**[CI.TEST]** REQUIREMENT: CI must execute appropriate testing of reasonable scope tagged with each commit, and must fail with test cases.
 
 **[CI.TEST.CROSS_PLATFORM]** REQUIREMENT: CI enabled tests must be executed across major platforms if appripriate.
 
