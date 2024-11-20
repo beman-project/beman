@@ -95,7 +95,7 @@ The short version: the world that Boost was born in no longer exists. In additio
 #+END_NOTES
 ** What we want
 #+BEGIN_SRC bash
-git clone https://github.com/beman-org/beman.git
+git clone https://github.com/bemanproject/beman.git
 $ cd beman
 $ cmake -S . -B build
 $ cmake --build build
