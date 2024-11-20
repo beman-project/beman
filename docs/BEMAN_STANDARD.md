@@ -34,10 +34,12 @@ needs. To make changes:
 1. Create a [discourse topic](https://discourse.boost.org) detailing the change
    and how it aligns with the core principles.
 2. After some community discussion, create a PR with the actual change on
-   [GitHub](https://github.com/bemanproject/beman) with a *leads question*
-   label. The PR should also link to the discourse topic.
+   [GitHub](https://github.com/bemanproject/beman) and apply the *Beman leads* label.
+   The PR should also link to the discourse topic.
 3. Continue discussions on the PR and discourse topic.
 4. Await a leads a decision based on the community feedback.
+
+Note: When making minor changes such as fixing typos, correcting grammar mistakes or improving clarity, some of the previous steps may be skipped - a PR can be directly created.
 
 ### Conventions
 
@@ -129,8 +131,22 @@ contain a one- or two-paragraph summary describing the library's purpose.
 `README.md` should indicate which papers the repository implements. Use the following style:
 
 ```markdown
-**Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
+**Implements**: [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
+```
+
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRAY_MATURITY_MODEL.md).
+
+Use the following style:
+
+```markdown
+**Status**: [Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRAY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes)
+```
+
+or
+
+```markdown
+**Status**: [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRAY_MATURITY_MODEL.md#production-ready-stable-api)
 ```
 
 ## CMake
@@ -204,7 +220,7 @@ if(BEMAN_<short_name>_BUILD_TESTS)
 endif()
 ```
 
-**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies. 
+**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies.
 
 Use the following style:
 
