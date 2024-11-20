@@ -34,10 +34,12 @@ needs. To make changes:
 1. Create a [discourse topic](https://discourse.boost.org) detailing the change
    and how it aligns with the core principles.
 2. After some community discussion, create a PR with the actual change on
-   [GitHub](https://github.com/bemanproject/beman) with a *leads question*
+   [GitHub](https://github.com/bemanproject/beman) with a *Beman leads*
    label. The PR should also link to the discourse topic.
 3. Continue discussions on the PR and discourse topic.
 4. Await a leads a decision based on the community feedback.
+
+Note: When doing minor changes such as fixing typos, correcting grammar mistakes or improving clarity the previous steps can be skipped - a PR can be directly created.
 
 ### Conventions
 
@@ -129,8 +131,19 @@ contain a one- or two-paragraph summary describing the library's purpose.
 `README.md` should indicate which papers the repository implements. Use the following style:
 
 ```markdown
-**Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
+**Implements**: [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
+```
+
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the [Beman library maturity model](./BEMAN_LIBRAY_MATURITY_MODEL.md#beman-library-maturity-model). Use the following style:
+
+```markdown
+**Status**: [Production ready. API may undergo changes.](./BEMAN_LIBRAY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes).
+
+or 
+
+**Status**: [Production ready. Stable API.](./BEMAN_LIBRAY_MATURITY_MODEL.md#production-ready-stable-api).
+
 ```
 
 ## CMake

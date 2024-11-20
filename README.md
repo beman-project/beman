@@ -21,7 +21,7 @@ This project is organized by our [Governance structure](docs/GOVERNANCE.md).
 ### Participating and contributing
 
 We welcome all to participate in the Beman project through 
-[Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3) discussions or GitHub contributions. Our discourse community is the best way to stay up to
+[Discourse](https://discourse.bemanproject.org) discussions or GitHub contributions. Our discourse community is the best way to stay up to
 date with the most recent developments.
 
 If you are looking for ways to contribute code, see the open issues of [bemanproject repositories](https://github.com/orgs/bemanproject/repositories). The [beman repository's issue list](https://github.com/bemanproject/beman/issues), in particular, has implementation requests for various papers. Issues marked with `good first issue` are perfect for new
