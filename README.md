@@ -24,7 +24,7 @@ We welcome all to participate in the Beman project through
 [Discourse](https://discourse.boost.org/t/welcome-to-beman-project-development/3) discussions or GitHub contributions. Our discourse community is the best way to stay up to
 date with the most recent developments.
 
-If you are looking for ways to contribute code, see the open issues of [beman-project repositories](https://github.com/orgs/beman-project/repositories). The [beman repository's issue list](https://github.com/beman-project/beman/issues), in particular, has implementation requests for various papers. Issues marked with `good first issue` are perfect for new
+If you are looking for ways to contribute code, see the open issues of [bemanproject repositories](https://github.com/orgs/bemanproject/repositories). The [beman repository's issue list](https://github.com/bemanproject/beman/issues), in particular, has implementation requests for various papers. Issues marked with `good first issue` are perfect for new
 contributors and usually have an assigned mentor. Don't hesitate to post on discourse with any questions.
 
 Please refer to our [code of conduct](/docs/CODE_OF_CONDUCT.md) and the
@@ -72,7 +72,7 @@ This is an example JSON object representing a Beman Project library:
 ```json
 {
   "name": "example",
-  "git_repository": "https://github.com/beman-project/example.git",
+  "git_repository": "https://github.com/bemanproject/example.git",
   "git_tag": "375f3e7",
   "default_branch": "main"
 }
@@ -88,7 +88,7 @@ A *unique*, logical name for the library.
 
 *Type*: String
 
-A URL for cloning the repository containing the library. This URL does not need to be part of the `beman-project` GitHub organization, or even on GitHub as long as the repo is publicly accessible for cloning.
+A URL for cloning the repository containing the library. This URL does not need to be part of the `bemanproject` GitHub organization, or even on GitHub as long as the repo is publicly accessible for cloning.
 
 #### `git_tag`
 

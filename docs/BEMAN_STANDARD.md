@@ -34,7 +34,7 @@ needs. To make changes:
 1. Create a [discourse topic](https://discourse.boost.org) detailing the change
    and how it aligns with the core principles.
 2. After some community discussion, create a PR with the actual change on
-   [GitHub](https://github.com/beman-project/beman) with a *leads question*
+   [GitHub](https://github.com/bemanproject/beman) with a *leads question*
    label. The PR should also link to the discourse topic.
 3. Continue discussions on the PR and discourse topic.
 4. Await a leads a decision based on the community feedback.

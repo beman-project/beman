@@ -2,7 +2,7 @@
   "libraries": [
     {
       "name": "example",
-      "git_repository": "https://github.com/beman-project/example.git",
+      "git_repository": "https://github.com/bemanproject/example.git",
       "git_tag": "375f3e7",
       "default_branch": "main"
     },
