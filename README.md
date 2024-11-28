@@ -31,8 +31,8 @@ discussions or GitHub contributions. Our discourse community is the best way to
 stay up to date with the most recent developments.
 
 If you are looking for ways to contribute code, see the open issues of
-[beman-project repositories](https://github.com/orgs/beman-project/repositories).
-The [beman repository's issue list](https://github.com/beman-project/beman/issues),
+[bemanproject repositories](https://github.com/orgs/bemanproject/repositories).
+The [beman repository's issue list](https://github.com/bemanproject/beman/issues),
 in particular, has implementation requests for various papers. Issues marked
 with `good first issue` are perfect for new contributors and usually have an
 assigned mentor. Don't hesitate to post on discourse with any questions.
@@ -89,8 +89,8 @@ This is an example JSON object representing a Beman Project library:
 
 ```json
 {
-  "name": "example",
-  "git_repository": "https://github.com/beman-project/example.git",
+  "name": "examplar",
+  "git_repository": "https://github.com/bemanproject/examplar.git",
   "git_tag": "375f3e7",
   "default_branch": "main"
 }
@@ -107,7 +107,7 @@ A *unique*, logical name for the library.
 *Type*: String
 
 A URL for cloning the repository containing the library. This URL does not need
-to be part of the `beman-project` GitHub organization, or even on GitHub as
+to be part of the `bemanproject` GitHub organization, or even on GitHub as
 long as the repo is publicly accessible for cloning.
 
 #### `git_tag`
