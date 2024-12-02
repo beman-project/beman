@@ -135,7 +135,7 @@ contain a one- or two-paragraph summary describing the library's purpose.
 
 ```suggestion
 **[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state its status of development (missing section implies development status). Beman libraries possible status: 
-    * `BEMAN DEVELOPMENT`: The target paper(s) may change within the ISO standardization stages, thus also the implementation.
+    * `BEMAN DEVELOPMENT`: The target paper(s) may change within the ISO standardization stages, thus also the implementation. Testing may be incomplete in this stage.
     * `BEMAN UNSTABLE`: The library implementation matches the paper(s), but needs more testing and possible more updates to be Beman Standard conformant. 
     * `BEMAN STABLE`: All target papers were accepted into the ISO C++ Working Draft and all of them were implemented in current Beman library. The code is production ready. 
 
