@@ -133,7 +133,7 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the purpose "README.IMPLEMENTS" section and a newline, any Beman library should state its status of development. Possible states: `BEMAN DEVELOPMENT`, `BEMAN UNSTABLE`, `BEMAN STABLE`. Defaults to `BEMAN DEVELOPMENT` state. 
+**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state its status of development. Possible states: `BEMAN DEVELOPMENT`, `BEMAN UNSTABLE`, `BEMAN STABLE`. Defaults to `BEMAN DEVELOPMENT` state (if the section is missing). 
 
 ```markdown
 **Library status:** `BEMAN STABLE` (since (#abc)[https://github.com/bemanproject/optional26/commit/#abc] - 20.11.2024).
