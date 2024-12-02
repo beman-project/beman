@@ -133,7 +133,12 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state its status of development. Possible states: `BEMAN DEVELOPMENT`, `BEMAN UNSTABLE`, `BEMAN STABLE`. Defaults to `BEMAN DEVELOPMENT` state (if the section is missing). 
+```suggestion
+**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state its status of development (missing section implies development status). Possible library states: 
+    * `BEMAN DEVELOPMENT`: The target paper(s) may change within the ISO standardization stages, thus also the implementation.
+     * `BEMAN UNSTABLE`: The library implementation matches the paper(s), but needs more testing and possible more updates to be Beman Standard conformant. 
+     * `BEMAN STABLE`: All target papers were accepted into the ISO C++ Working Draft and all of them were implemented in current Beman library. The code is production ready. 
+
 
 ```markdown
 **Library status:** `BEMAN STABLE` (since (#abc)[https://github.com/bemanproject/optional26/commit/#abc] - 20.11.2024).
