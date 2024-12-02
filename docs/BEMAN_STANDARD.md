@@ -134,7 +134,7 @@ contain a one- or two-paragraph summary describing the library's purpose.
 ```
 
 ```suggestion
-**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state its status of development (missing section implies development status). Beman libraries possible status: 
+**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state the library status (missing section implies development status). Beman libraries possible status: 
     * `BEMAN DEVELOPMENT`: The target paper(s) may change within the ISO standardization stages, thus also the implementation. Testing may be incomplete in this stage.
     * `BEMAN UNSTABLE`: The paper(s) may be still pending for final ISO C++ Standardization review. The library implementation matches the paper(s), but needs more testing and possible more updates to be Beman Standard conformant.
     * `BEMAN STABLE`: All target papers were accepted into the ISO C++ Working Draft and all of them were implemented in the current Beman library. The testing is completed. The code is production ready. Only bugfixes expected in this stage. Any other addition to the same utility (e.g., adding another C++29 std::optional extension on top of C++26 std::optional) would be done into a new Beman library / repo.
