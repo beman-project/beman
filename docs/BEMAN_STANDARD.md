@@ -141,7 +141,7 @@ contain a one- or two-paragraph summary describing the library's purpose.
 
 
 ```markdown
-**Library status:** `BEMAN STABLE` (since (#abc)[https://github.com/bemanproject/optional26/commit/#abc] - 20.11.2024).
+**Library status:** `beman.optional26` is `BEMAN STABLE` (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
 ```
 
 ## CMake
