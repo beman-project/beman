@@ -133,6 +133,12 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
+**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state the library status (missing section implies development status). Check [BEMAN_PROCESS.md#library-lifetime](./BEMAN_PROCESS.md#library-lifetime).
+
+```markdown
+**Library status:** `beman.optional26` is `BEMAN STABLE` (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
+```
+
 ## CMake
 
 **[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
