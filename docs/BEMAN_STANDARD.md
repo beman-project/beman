@@ -112,9 +112,7 @@ to build it, and links to further documentation.
 
 ## `README.md`
 
-**[README.TITLE]** RECOMMENDATION: The `README.md` should begin with a level 1
-header with the name of the library optionally followed with a ":" and short
-description.
+**[README.TITLE]** RECOMMENDATION: The `README.md` must begin with a level 1 header with the name of the library optionally followed with a ":" and short description.
 
 Examples:
 
@@ -122,21 +120,25 @@ Examples:
 # beman.sender_receiver: Scalable Asychronous Program Building Blocks
 ```
 
-**[README.PURPOSE]** RECOMMENDATION: Following the title, the `README.md` should
-contain a one- or two-paragraph summary describing the library's purpose.
+**[README.PURPOSE]** REQUIREMENT: Following the title, the `README.md` must contain a one- or two-paragraph summary describing the library's purpose.
 
-**[README.IMPLEMENTS]** RECOMMENDATION: Following the purpose and a newline, the
-`README.md` should indicate which papers the repository implements. Use the following style:
+**[README.IMPLEMENTS]** REQUIREMENT: Following the purpose and a newline, the `README.md` must indicate which papers the repository implements. Use the following style:
 
 ```markdown
 **Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state the library status (missing section implies development status). Check [BEMAN_PROCESS.md#library-lifetime](./BEMAN_PROCESS.md#library-lifetime).
+or, if this is an early idea implementation and no paper available:
 
 ```markdown
-**Library status:** `beman.optional26` is `BEMAN STABLE` (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
+**Implements:**  N/A
+```
+
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the library status. Check [BEMAN_PROCESS.md#library-lifetime](./BEMAN_PROCESS.md#library-lifetime). Use the following style:
+
+```markdown
+**Library status:** `beman.optional26` is [BEMAN STABLE](./BEMAN_PROCESS.md#library-lifetime) (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
 ```
 
 ## CMake
