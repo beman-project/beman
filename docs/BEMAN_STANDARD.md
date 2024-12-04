@@ -5,8 +5,9 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 # The Beman Standard
 
 This document specifies rules and recommendations for Beman project libraries.
-Its goal is to create consistency facilitating the evaluation of, and
-contribution to Beman libraries.
+Its goal is to create consistency facilitating the evaluation of, and contribution to Beman libraries.
+
+Examples: rules or recommendations for coding style, license, directory/file layout etc.
 
 ## Introduction
 
@@ -31,11 +32,11 @@ This standard is driven by four core principles:
 This is a living document that adapts to evolving best practices and community
 needs. To make changes:
 
-1. Create a [discourse topic](https://discourse.boost.org) detailing the change
-   and how it aligns with the core principles.
-2. After some community discussion, create a PR with the actual change on
-   [GitHub](https://github.com/bemanproject/beman) with a *leads question*
-   label. The PR should also link to the discourse topic.
+1. Create a [discourse topic](https://discourse.bemanproject.org/latest) detailing the changes
+and how it aligns with the core principles.
+2. After some community discussion, create a PR with the actual changes on
+[GitHub](https://github.com/bemanproject/beman) with the `Beman Leads`
+label. The PR should also link to the discourse topic.
 3. Continue discussions on the PR and discourse topic.
 4. Await a leads a decision based on the community feedback.
 
@@ -120,25 +121,25 @@ Examples:
 # beman.sender_receiver: Scalable Asychronous Program Building Blocks
 ```
 
-**[README.PURPOSE]** REQUIREMENT: Following the title, the `README.md` must contain a one- or two-paragraph summary describing the library's purpose.
+**[README.PURPOSE]** REQUIREMENT: Following the title, the `README.md` must contain a one or two-paragraph summary describing the library's purpose.
 
 **[README.IMPLEMENTS]** REQUIREMENT: Following the purpose and a newline, the `README.md` must indicate which papers the repository implements. Use the following style:
 
 ```markdown
-**Implements:** [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
+**Implements**:[`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-or, if this is an early idea implementation and no paper available:
+or, if this is an early idea implementation and there is no paper available:
 
 ```markdown
-**Implements:**  N/A
+**Implements**: N/A
 ```
 
-**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the library status. Check [BEMAN_PROCESS.md#library-lifetime](./BEMAN_PROCESS.md#library-lifetime). Use the following style:
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the library status. Check [BEMAN_PROCESS.md#beman-libraries-lifetime](./BEMAN_PROCESS.md#beman-libraries-lifetime). Use the following style:
 
 ```markdown
-**Library status:** `beman.optional26` is [BEMAN STABLE](./BEMAN_PROCESS.md#library-lifetime) (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
+**Library status**: [BEMAN STABLE](./BEMAN_PROCESS.md#beman-libraries-lifetime) (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
 ```
 
 ## CMake
