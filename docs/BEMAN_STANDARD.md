@@ -140,6 +140,22 @@ contain a one- or two-paragraph summary describing the library's purpose.
 **[CMAKE.PROJECT_NAME]** RECOMMENDATION: The CMake project name should be
 identical to the beman library name.
 
+**[CMAKE.PASSIVE_PROJECTS]** REQUIREMENT: CMake projects must not adjust
+user-specified compilation flags.
+
+User-provided compilation flags, whether specified via presets, command-line
+options, or toolchains, must not be modified by CMake projects. Therefore, CMake
+projects may not set variables that impact compilation flags such as
+`CMAKE_CXX_FLAGS` and `CMAKE_CXX_STANDARD`, as this would override user settings.
+
+For common compiler/flag combinations, it is recommended to provide CMake presets
+as a convenient alternative for users.
+
+If specific compiler flags are essential for project functionality (e.g., C++
+standard features), use utilities like `check_cxx_source_compiles` to detect
+support and provide a helpful error message suggesting appropriate flags for the
+user's compiler.
+
 **[CMAKE.LIBRARY_NAME]** RECOMMENDATION: The CMake library target's name should
 be identical to the library name.
 
@@ -170,6 +186,20 @@ add_executable(beman.smart_pointer.examples.basic)
 add_executable(beman.smart_pointer.tests.roundtrip)
 #...
 ```
+
+**[CMAKE.PASSIVE_TARGETS]** REQUIREMENT: External targets must not modify
+compilation flags of dependents.
+
+Therefore, `target_compile_features` (e.g., `cxx_std_20`) must not be used
+because it modifies the compilation environment of dependent targets. Compiler
+support for required features should be determined at CMake configuration time
+using `check_cxx_source_compiles`.
+
+Furthermore, `target_compile_definitions` with `PUBLIC` or `INTERFACE`
+visibility must not be used, as these definitions are also propagated to
+dependent targets. Preprocessor definitions intended for external use should be
+generated into a `config.hpp` file at CMake configuration time. This
+`config.hpp` should then be included by public headers.
 
 **[CMAKE.CONFIG]** REQUIREMENT: At `install` time, a
 `<library_name>Config.cmake` must be created which exports a
@@ -422,3 +452,21 @@ copyright notice following the SPDX license identifier.
 
 **[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/` should export
 entities in the `beman::<short_name>` namespace.
+
+**[CPP.NO_FLAG_FORKING]** REQUIREMENT: C++ preprocessing must produce identical
+output regardless of compiler flags.
+
+Therefore, feature test macros such as `__cpp_explicit_this_parameter` should
+not be used directly. Instead use the following approach for feature-dependent
+code generation:
+
+1. Check for availability at CMake time using, for example,
+   `check_cxx_source_compiles`
+2. Create a CMake `option` (e.g. `BEMAN_&lt;short_name&gt;_USE_DEDUCING_THIS`)
+   with a default value based on detected support.
+3. Generate a `config.hpp` with a `#define` macro set to the selected option.
+4. Use this macro in place of the feature test macro.
+
+See
+[beman.iterator_interface](https://github.com/bemanproject/iterator_interface/blob/5e6714e10faa1799723669e04abec6e75adbdb89/CMakeLists.txt#L44)
+for an example.
