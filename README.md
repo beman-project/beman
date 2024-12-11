@@ -89,8 +89,8 @@ This is an example JSON object representing a Beman Project library:
 
 ```json
 {
-  "name": "example",
-  "git_repository": "https://github.com/bemanproject/example.git",
+  "name": "examplar",
+  "git_repository": "https://github.com/bemanproject/examplar.git",
   "git_tag": "375f3e7",
   "default_branch": "main"
 }

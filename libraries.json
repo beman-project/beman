@@ -1,8 +1,8 @@
 {
   "libraries": [
     {
-      "name": "example",
-      "git_repository": "https://github.com/bemanproject/example.git",
+      "name": "exemplar",
+      "git_repository": "https://github.com/bemanproject/exemplar.git",
       "git_tag": "375f3e7",
       "default_branch": "main"
     },
