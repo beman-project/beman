@@ -94,6 +94,19 @@ Examples: A `beman.smart_pointer` library's repository should be named `smart_po
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
 
+**[REPOSITORY.DISALLOW_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. All its dependencies should be fetch via [cmake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
+Use the following style:
+
+```CMake
+FetchContent_Declare(
+ <dependency name>
+ EXCLUDE_FROM_ALL
+ GIT_REPOSITORY ${GIT_REPOSITORY}
+ GIT_TAG ${GIT_TAG}               # ${RELEASE TAG} 
+)
+FetchContent_MakeAvailable(<dependency name>)
+```
+
 ## Top-level
 
 The top-level of a Beman library repository must consist of `CMakeLists.txt`,
