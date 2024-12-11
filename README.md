@@ -38,7 +38,7 @@ with `good first issue` are perfect for new contributors and usually have an
 assigned mentor. Don't hesitate to post on discourse with any questions.
 
 Please refer to our [code of conduct](/docs/CODE_OF_CONDUCT.md) and the
-[Beman standard](/docs/BEMAN_STANDARD.md) for further information about the 
+[Beman standard](/docs/BEMAN_STANDARD.md) for further information about the
 community and development guidelines.
 
 ### FAQ
