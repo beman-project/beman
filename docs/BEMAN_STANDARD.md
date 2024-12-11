@@ -94,7 +94,7 @@ Examples: A `beman.smart_pointer` library's repository should be named `smart_po
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
 
-**[REPOSITORY.DISALLOW_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. All its dependencies should be fetch via [cmake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
+**[REPOSITORY.DISALLOW_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. All its dependencies should be fetched via [cmake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
 
 Use the following style:
 
