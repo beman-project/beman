@@ -100,10 +100,10 @@ Use the following style:
 
 ```CMake
 FetchContent_Declare(
- <dependency name>
- EXCLUDE_FROM_ALL
- GIT_REPOSITORY ${GIT_REPOSITORY}
- GIT_TAG ${GIT_TAG}               # ${RELEASE TAG} 
+    <dependency name>
+    EXCLUDE_FROM_ALL
+    GIT_REPOSITORY ${GIT_REPOSITORY}
+    GIT_TAG ${GIT_TAG}
 )
 FetchContent_MakeAvailable(<dependency name>)
 ```
