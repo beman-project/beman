@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 # The Beman Library Maturity Model
 
-The Beman maturity model helps developers quickly assess the production readiness of Beman libraries by classifying them based on development phase and interface stability.
+`The Beman maturity model` helps developers quickly assess the production readiness of Beman libraries by classifying them based on development phase and interface stability.
 
 <img src="../images/beman_flow-beman_library_maturity_model.png">
 
@@ -18,7 +18,13 @@ The Beman maturity model helps developers quickly assess the production readines
 <img src="../images/logos/beman_logo-beman_library_production_ready_stable_api.png" style="width:5%; height:auto;"> These production-ready libraries offer stable, standardized APIs.  They are part of the C++ Standard and can be used as a polyfill for compilers lacking native support. Note that these libraries will be retired after two standardization cycles (6 years).
 
 ### Retired. No longer maintained or actively developed.
-<img src="../images/logos/beman_logo-beman_library_retired.png" style="width:5%; height:auto;"> These libraries are not recommended for production use. They were [Production ready. Stable API.](./BEMAN_LIBRAY_MATURITY_MODEL.md#production-ready-stable-api) at some point, but are no longer developed or maintained, being superseded by native compiler implementations.
+<img src="../images/logos/beman_logo-beman_library_retired.png" style="width:5%; height:auto;"> These libraries were archived and no longer maintained. These libraries are not recommended for production use.
 
-### Dropped. Never completed.
-<img src="../images/logos/beman_logo-beman_library_dropped_never_completed.png" style="width:5%; height:auto;"> These libraries should not be used for production. They were not completed because they were not accepted into the the C++ Standard.
+Transition examples:
+
+* They were [Production ready. Stable API.](./BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) at some point, but are no longer developed or maintained, being superseded by native compiler implementations - `Mature retirement`.
+
+* They were [Production ready. API may undergo changes.](./BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes) at some point, but are no longer developed or maintained, being rejected from the ISO C+ Standardization - `Early retirement`.
+
+* They were [Under development and not yet ready for production use.](./BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use) at some point and were abandoned - `Early retirement`.
+
