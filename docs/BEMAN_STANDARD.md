@@ -94,11 +94,13 @@ Examples: A `beman.smart_pointer` library's repository should be named `smart_po
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
 
-**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. Check `CMAKE.USE_FETCH_CONTENT` for alternatives.
+**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not
+use git submodules. Check `CMAKE.USE_FETCH_CONTENT` for alternatives.
 
 Known exceptions:
-* [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21): A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
 
+- [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21):
+A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
 
 ## Top-level
 
@@ -145,7 +147,9 @@ following style:
 **[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all
 targets by default (including dependency targets).
 
-**[CMAKE.USE_FETCH_CONTENT]** RECOMMENDATION: The root `CMakeLists.txt` should fetch all dependency targets via [CMake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
+**[CMAKE.USE_FETCH_CONTENT]** RECOMMENDATION: The root `CMakeLists.txt` should
+fetch all dependency targets via
+[CMake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
 
 Use the following style:
 
@@ -159,8 +163,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(<dependency name>)
 ```
 
-Check `[CMAKE.SKIP_TESTS]` in this document for a working example or [exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
-
+Check `[CMAKE.SKIP_TESTS]` in this document for a working example or
+[exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
 
 **[CMAKE.PROJECT_NAME]** RECOMMENDATION: The CMake project name should be
 identical to the beman library name.
