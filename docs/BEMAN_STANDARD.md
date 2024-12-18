@@ -461,7 +461,7 @@ not be used directly. Instead use the following approach for feature-dependent
 code generation:
 
 1. Check for availability at CMake time using, for example,
-   `check_cxx_source_compiles`
+   `check_cxx_source_compiles`.
 2. Create a CMake `option` (e.g. `BEMAN_&lt;short_name&gt;_USE_DEDUCING_THIS`)
    with a default value based on detected support.
 3. Generate a `config.hpp` with a `#define` macro set to the selected option.
